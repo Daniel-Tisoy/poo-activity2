@@ -1,6 +1,6 @@
 # Actividad individual 2 Valor 20%
 
-Universidad Nacional de Colombia - Sede MedellÃ­n
+Universidad Nacional de Colombia - Sede Medelli­n
 
 **Estudiante:** Luis Daniel Tisoy Tandioy
 
