@@ -16,7 +16,8 @@ public class Ejercicio3 {
                 2,
                 4,
                 250,
-                Car.Color.BLACK
+                Car.Color.BLACK,
+                true
         );
         // testing car methods
         myCar.speedUp(100);

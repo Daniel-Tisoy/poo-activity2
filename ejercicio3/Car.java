@@ -12,12 +12,12 @@ public class Car {
     int model;
     int engine;
 
-    enum fuelType {
+    public enum fuelType {
         GASOLINE, BIOETHANOL, DIESEL, BIODIESEL, NATURAL_GAS
     }
     fuelType fuel;
 
-    enum carType {
+    public enum carType {
         CITY, SUBCOMPACT, COMPACT, FAMILY, EXECUTIVE, SUV
     }
     carType category;
@@ -30,9 +30,10 @@ public class Car {
     }
     Color color;
     int currentSpeed = 0;
+    boolean isAutomatic;
     ArrayList<Integer> ticketList = new ArrayList<>();
 
-    public Car(String brand, int model, int engine, fuelType fuel, carType category, int numDoors, int numSeat, int maxSpeed, Color color) {
+    public Car(String brand, int model, int engine, fuelType fuel, carType category, int numDoors, int numSeat, int maxSpeed, Color color, boolean isAutomatic) {
         this.brand = brand;
         this.model = model;
         this.engine = engine;
@@ -42,7 +43,12 @@ public class Car {
         this.numSeat = numSeat;
         this.maxSpeed = maxSpeed;
         this.color = color;
+        this.isAutomatic = isAutomatic;
     }
+
+  
+
+  
 
     public ArrayList<Integer> getTicketList() {
         return ticketList;
@@ -128,6 +134,14 @@ public class Car {
         this.currentSpeed = currentSpeed;
     }
 
+    public boolean getIsAutomatic() {
+        return isAutomatic;
+    }
+
+    public void setIsAutomatic(boolean isAutomatic) {
+        this.isAutomatic = isAutomatic;
+    }
+
     public int amountTickets() {
         return this.getTicketList().size();
     }
@@ -175,15 +189,16 @@ public class Car {
     }
 
     public void showInfo() {
-        System.out.println("Brand = " + this.brand);
-        System.out.println("Model = " + this.model);
-        System.out.println("Engine = " + this.engine);
-        System.out.println("Fuel type = " + this.fuel);
-        System.out.println("Car type = " + this.category);
-        System.out.println("Number of doors = " + this.numDoors);
-        System.out.println("Number of seats = " + this.numSeat);
-        System.out.println("Maximum speed = " + this.maxSpeed);
-        System.out.println("Color = " + this.color);
+        System.out.println("Brand: " + this.brand);
+        System.out.println("Model: " + this.model);
+        System.out.println("Engine: " + this.engine);
+        System.out.println("Fuel type: " + this.fuel);
+        System.out.println("Car type: " + this.category);
+        System.out.println("Number of doors: " + this.numDoors);
+        System.out.println("Number of seats: " + this.numSeat);
+        System.out.println("Maximum speed: " + this.maxSpeed);
+        System.out.println("Color: " + this.color);
+        System.out.println("Is automatic: " + this.getIsAutomatic());
         System.out.println();
         System.out.println("TICKETS");
         System.out.println("debit: " + this.debitTickets());
