@@ -20,6 +20,8 @@ public class Ejercicio4 {
         // base = 6, height = 8
         Rectangle rectangle = new Rectangle(6, 8);
 
+        Trapezoid trapezoid = new Trapezoid(10, 4, 5, 5, 4);
+
         System.out.println("=== CIRCLE ===");
         System.out.println("AREA: " + circle.getArea());
         System.out.println("PERIMETER: " + circle.getPerimeter());
@@ -50,5 +52,10 @@ public class Ejercicio4 {
         System.out.println("=== RHOMBUS ===");
         System.out.println("AREA: " + rhombus.getArea());
         System.out.println("PERIMETER: " + rhombus.getPerimeter());
+        System.out.println();
+
+        System.out.println("=== TRAPEZOID ===");
+        System.out.println("AREA: " + trapezoid.getArea());
+        System.out.println("PERIMETER: " + trapezoid.getPerimeter());
     }
 }
