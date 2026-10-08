@@ -7,11 +7,11 @@ package dtisoy.ejercicio4;
  */
 
 public class Trapezoid extends GeometricShapes {
-    private double majorBase;
-    private double minorBase;
-    private double side1;
-    private double side2;
-    private double height;
+    public double majorBase;
+    public double minorBase;
+    public double side1;
+    public double side2;
+    public double height;
 
     public Trapezoid(double majorBase, double minorBase, double side1, double side2, double height) {
         this.majorBase = majorBase;
@@ -24,13 +24,11 @@ public class Trapezoid extends GeometricShapes {
 
     @Override
     public double getArea() {
-        // Fórmula: ((Base Mayor + Base Menor) * altura) / 2
         return ((this.majorBase + this.minorBase) * this.height) / 2;
     }
 
     @Override
     public double getPerimeter() {
-        // Suma de los cuatro lados exteriores
         return this.majorBase + this.minorBase + this.side1 + this.side2;
     }
 }
